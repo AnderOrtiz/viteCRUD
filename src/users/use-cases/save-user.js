@@ -18,7 +18,7 @@ export const saveUser = async(userLike) => {
         throw 'No implementada la actualización'
     }
 
-    const updateUser = await createUser(user);
+    const updateUser = await createUser(userToSave);
     return updateUser;
 }
 

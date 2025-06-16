@@ -68,6 +68,9 @@ export const renderModal = (element, callback) => {
         const formData = new FormData(form);
         const userLike = {...loadedUser};
 
+        userLike.isActive = form.querySelector('[name="isActive"]').checked;
+
+
         for (const [key, value] of formData) {
             if (key === 'balance') {
                 userLike[key] = +value;
